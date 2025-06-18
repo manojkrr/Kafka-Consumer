@@ -1,4 +1,4 @@
-# Simple Kafka Consumer Spring Boot Application - Under Development
+# Simple Kafka Consumer Spring Boot Application
 
 ## Overview
 
