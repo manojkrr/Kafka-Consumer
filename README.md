@@ -23,7 +23,11 @@ mvn clean install
 java -jar target/kafka-consumer-0.0.1-SNAPSHOT.jar
 ```
 
-## Swagger
+## Clone and Run the Producer Application
+
+```shell
+git clone https://github.com/manojkrr/Kafka-Producer.git
+```
 
 Access the Swagger UI at http://localhost:8081/kafka-producer/swagger-ui.html
 

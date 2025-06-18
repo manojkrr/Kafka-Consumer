@@ -1,0 +1,32 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /kafka-producer
+
+spring:
+  application:
+    name: Kafka-Consumer
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: my-consumer-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      properties:
+        max.poll.records: 10
+    topic:
+      name: test-topic
+
+app:
+  kafka:
+    topic: test-topic
+    consumer:
+      retry:
+        max-attempts: 3
+        backoff:
+          initial-interval: 1000
+          multiplier: 2.0
+          max-interval: 5000
+
