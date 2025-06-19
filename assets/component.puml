@@ -1,7 +1,7 @@
 @startuml
 title Kafka Producer and Consumer Architecture
 
-top to bottom direction
+left to right direction
 
 actor user
 
